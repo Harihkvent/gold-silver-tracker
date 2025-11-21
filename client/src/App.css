@@ -1,0 +1,190 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #141e30, #0f172a);
+  color: #f9fafb;
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-group label {
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: 1px solid #4b5563;
+  background: #111827;
+  color: #e5e7eb;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, border 0.15s ease;
+}
+
+.btn:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+.btn.active {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #111827;
+  border-color: transparent;
+}
+
+.btn.refresh {
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.status {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.status.error {
+  color: #fecaca;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.card {
+  border-radius: 18px;
+  padding: 18px 16px;
+  background: radial-gradient(circle at top, #1f2937, #020617);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card.gold {
+  border: 1px solid rgba(250, 204, 21, 0.7);
+}
+
+.card.silver {
+  border: 1px solid rgba(209, 213, 219, 0.7);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.price .symbol {
+  font-size: 1rem;
+}
+
+.price .value {
+  font-size: 1.6rem;
+}
+
+.price .unit {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-left: 4px;
+}
+
+.subprice {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.footer a {
+  color: #fbbf24;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.updated {
+  margin-top: 4px;
+}
+
+.disclaimer {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 16px 10px 30px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
