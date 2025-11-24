@@ -194,7 +194,7 @@ function App() {
         )}
         <p className="disclaimer">
           Prices are for information only and do not constitute financial
-          advice.
+          advice or purchase.
         </p>
       </footer>
     </div>
