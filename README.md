@@ -47,14 +47,10 @@ cd gold-silver-tracker
 ### 2. Install dependencies
 
 ```bash
-# Install backend dependencies
-npm install
-
-# Install frontend dependencies
-cd client
-npm install
-cd ..
+npm run install:all
 ```
+
+This installs both backend and frontend dependencies in one command.
 
 ### 3. Configure environment variables
 
@@ -67,18 +63,30 @@ PORT=4000
 
 ### 4. Start development servers
 
-Open **two terminals**:
+> **Important:** Both the backend and frontend servers must be running for the app to work. The easiest way is the single command below.
 
 ```bash
-# Terminal 1 – Backend (runs on http://localhost:4000)
-node server.js
-
-# Terminal 2 – Frontend (runs on http://localhost:3000)
-cd client
-npm start
+npm run dev
 ```
 
-The React dev server proxies `/api` requests to `http://localhost:4000` automatically, so the app works out of the box.
+This starts both servers concurrently:
+- **Backend** → `http://localhost:4000` (Express API)
+- **Frontend** → `http://localhost:3000` (React dev server)
+
+<details>
+<summary>Alternative: start servers separately</summary>
+
+```bash
+# Terminal 1 – Backend
+npm run server
+
+# Terminal 2 – Frontend
+npm run client
+```
+
+</details>
+
+The React dev server proxies `/api` requests to `http://localhost:4000` automatically.
 
 ### 5. Open in browser
 
