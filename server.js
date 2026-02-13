@@ -19,7 +19,7 @@ if (!GOLDPRICEZ_API_KEY) {
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // React dev server origin
+    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
   })
 );
 
@@ -333,6 +333,11 @@ app.get("/api/rates", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
-});
+// Only start listening when running as a standalone server (not in Vercel serverless)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`✅ Server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
