@@ -99,7 +99,7 @@ cd client
 npm run build
 ```
 
-This creates an optimised production build in `client/build/`.
+This creates an optimized production build in `client/build/`.
 
 ## Deploying to Vercel
 
